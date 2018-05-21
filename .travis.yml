@@ -1,0 +1,51 @@
+language: cpp
+
+os:
+    - linux
+#    - osx
+
+compiler:
+#    - clang
+    - gcc
+
+#env:
+#    - FOO=bar
+
+#sudo: require
+
+addons:
+    apt:
+        packages:
+        - cmake 
+        - git
+        - install
+        - qtbase5-dev
+        - qtbase5-dev-tools
+        - qttools5-dev-tools
+        - qtscript-tools
+        - python-all-dev
+        - build-essential
+        - qt5-default
+        - bison
+        - flex
+        - qtbase5-private-dev
+        - qtconnectivity5-dev
+        - qtdeclarative5-dev
+        - qtdeclarative5-dev-tools
+        - qtconnectivity5-dev
+        - qt5keychain-dev
+        - qt5-style-plugins
+        - libkf5texteditor-dev
+        - libqt5svg5-dev
+        - gettext
+        - qttools5-dev
+        - libqt5webkit5-dev
+        - qtmultimedia5-dev
+        - libqt5xmlpatterns5-dev
+
+install:
+    - git clone https://github.com/libresilicon/qtflow
+
+script: 
+    - make
+    - make tests
